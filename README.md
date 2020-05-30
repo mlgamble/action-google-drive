@@ -9,8 +9,8 @@ This action uploads the specified directory/files to Google Drive.
   uses: satackey/action-google-drive@v1
   with:
     skicka-tokencache-json: ${{ secrets.SKICKA_TOKENCACHE_JSON }}
-    upload-from: ./
-    upload-to: /path/to/upload
+    action: download
+    args: '-ignore-times -download-google-apps-files repo .'
 
     # For those who set up Google Drive API client ID and secret themselves
     google-client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
